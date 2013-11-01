@@ -27,6 +27,7 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " original repos on github
+Bundle 'Townk/vim-autoclose'
 Bundle 'vim-scripts/html5.vim'
 Bundle 'vim-scripts/OmniCppComplete'
 Bundle 'Lokaltog/vim-easymotion'
@@ -47,7 +48,7 @@ Bundle 'guns/xterm-color-table.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kchmck/vim-coffee-script'
 " origin repos on vim scripts
-" Bundle "showcolor"
+" Bundle 'showcolor'
 
 filetype plugin indent on
 
