@@ -46,7 +46,6 @@ Bundle 'kchmck/vim-coffee-script'
 " " origin repos on vim scripts
 " Bundle "showcolor"
 
-
 filetype plugin indent on
 
 "Some nice mapping to switch syntax (useful if one mixes different languages
