@@ -1,3 +1,5 @@
 [user]
-	name = Timothy Lee
 	email = timmy.ccl@gmail.com
+	name = Timothy Lee
+[push]
+	default = matching
