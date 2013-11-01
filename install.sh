@@ -5,4 +5,3 @@ ln -s ./work/dotfiles/.gitconfig .gitconfig
 ln -s ./work/dotfiles/.vimrc .vimrc
 ln -s ./work/dotfiles/.vim .vim
 ln -s ./work/dotfiles/.tmux.conf .tmux.conf
-ln -s ./work/dotfiles/.tmux .tmux
