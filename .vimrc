@@ -14,36 +14,39 @@ set hidden              " Allow "hidden" buffers.
 set nobomb              " remove UTF-8 bomb
 set cursorline
 
-filetype off 		" Enable filetype detection
+filetype off
 
 " vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-" 
-" " let Vundle manage Vundle
+
+" let Vundle manage Vundle
+" required! 
 Bundle 'gmarik/vundle'
-" " origin repos on github
-"Bundle 'Townk/vim-autoclose'
-""Bundle 'vim-scripts/OmniCppComplete'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'vim-scripts/html5.vim'
+Bundle 'vim-scripts/OmniCppComplete'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'ervandew/supertab'
 Bundle 'majutsushi/tagbar'
-" Bundle 'vim-scripts/YankRing.vim'
-""Bundle 'vim-scripts/VisIncr'
+Bundle 'vim-scripts/VisIncr'
 Bundle 'wincent/Command-T'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'garbas/vim-snipmate'
-Bundle 'honza/snipmate-snippets'
+" Bundle 'honza/snipmate-snippets'
 Bundle 'pangloss/vim-javascript'
 Bundle 'vim-scripts/nginx.vim'
-""Bundle 'guns/xterm-color-table.vim'
+Bundle 'guns/xterm-color-table.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kchmck/vim-coffee-script'
-" " origin repos on vim scripts
+" origin repos on vim scripts
 " Bundle "showcolor"
 
 filetype plugin indent on
@@ -52,7 +55,6 @@ filetype plugin indent on
 "in one file)
 map <leader>$ :syntax sync fromstart<cr>
 autocmd BufEnter * :syntax sync fromstart
-
 
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
@@ -99,6 +101,11 @@ set noerrorbells
 set novisualbell
 " set t_vb=
 set tm=500
+
+"set switchbuf=usetab
+"nmap <C-n> :tabn<CR>
+"nmap <C-p> :tabp<CR>
+"nmap <C-t> :tabnew<CR>
 
 " TAB setting{
    set expandtab        "replace <TAB> with spaces
@@ -265,9 +272,6 @@ hi link EasyMotionShade  Comment
 
 " --- Powerline
 let g:Powerline_symbols = 'fancy'
-
-" fix 256color bg color
-set term=screen-256color
 
 " number on
 set nu
