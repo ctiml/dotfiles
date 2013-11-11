@@ -2,7 +2,7 @@
 set bell-style=visual
 
 # Alias
-alias less="/usr/bin/less -EmrSw"
+alias less="/usr/bin/less -mrSw"
 alias more="less"
 #alias top="htop"
 alias cd..="cd .."
