@@ -274,5 +274,7 @@ hi link EasyMotionShade  Comment
 " --- Powerline
 let g:Powerline_symbols = 'fancy'
 
+set term=screen-256color
+
 " number on
 set nu

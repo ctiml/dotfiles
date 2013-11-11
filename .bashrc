@@ -4,7 +4,7 @@ set bell-style=visual
 # Alias
 alias less="/usr/bin/less -EmrSw"
 alias more="less"
-alias top="htop"
+#alias top="htop"
 alias cd..="cd .."
 alias cd...="cd ../.."
 alias tmux="tmux -2"
