@@ -47,6 +47,7 @@ Bundle 'vim-scripts/nginx.vim'
 Bundle 'guns/xterm-color-table.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'cakebaker/scss-syntax.vim'
 " origin repos on vim scripts
 " Bundle 'showcolor'
 
@@ -114,6 +115,7 @@ set tm=500
    set shiftwidth=4 
 
    au FileType Makefile set noexpandtab
+   "au FileType ruby setlocal softtabstop=2 set shiftwidth=4
 "}      							
 
 

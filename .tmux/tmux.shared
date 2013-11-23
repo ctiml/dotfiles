@@ -9,7 +9,7 @@ set -s escape-time 0
 # Theme
 setw -g window-status-format ' #I#[fg=yellow]#F#[default]#W '
 setw -g window-status-current-format ' #I#[fg=yellow]#F#[default]#W '
-setw -g window-status-current-bg colour12
+setw -g window-status-current-bg colour4
 setw -g window-status-current-fg colour15
 setw -g window-status-current-attr bright
 setw -g window-status-bg black
@@ -24,10 +24,10 @@ set -g pane-border-bg default
 set -g pane-border-fg default
 
 ## for mouse
-set -g mode-mouse on
-set -g mouse-resize-pane on
-set -g mouse-select-pane on
-set -g mouse-select-window on
+set -g mode-mouse off
+set -g mouse-resize-pane off
+set -g mouse-select-pane off
+set -g mouse-select-window off
 
 bind m \
     set -g mode-mouse on \;\
@@ -51,9 +51,9 @@ set -g status-interval 1
 set -g status-justify centre
 set -g status-left-length 100
 set -g status-right-length 100
-set -g status-right '#[fg=green][%m/%d %H:%M:%S]#[default]'
+#set -g status-right '#[fg=green][%m/%d %H:%M:%S]#[default]'
 set -g status-left '#[bg=colour20] > #I #W < #[bg=colour32] [#P] #T #[default] '
-set -g status-right '#[bg=colour32] #(whoami)@#h #[bg=colour20] #(date \"+%Y.%m.%d %I:%M %p\") '
+set -g status-right '#[bg=colour30] #(whoami)@#h #[bg=colour20] #(date \"+%Y.%m.%d %I:%M %p\") '
 
 # monitor activity
 setw -g monitor-activity off
