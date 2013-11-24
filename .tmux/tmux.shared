@@ -8,9 +8,10 @@ set -s escape-time 0
 # setting up status bar
 # Theme
 setw -g window-status-format ' #I#[fg=yellow]#F#[default]#W '
-setw -g window-status-current-format ' #I#[fg=yellow]#F#[default]#W '
-setw -g window-status-current-bg colour4
-setw -g window-status-current-fg colour15
+setw -g window-status-current-format '#[bg=colour29] #[fg=colour255]#I#F#[fg=colour255]#W '
+#setw -g window-status-current-bg colour4
+#setw -g window-status-current-fg colour15
+#setw -g window-status-current-attr bright,underscore
 setw -g window-status-current-attr bright
 setw -g window-status-bg black
 setw -g window-status-fg white
@@ -19,9 +20,9 @@ set -g message-fg white
 set -g message-bg colour5
 set -g message-attr bright
 set -g pane-active-border-bg default
-set -g pane-active-border-fg colour12
+set -g pane-active-border-fg colour46
 set -g pane-border-bg default
-set -g pane-border-fg default
+set -g pane-border-fg colour250
 
 ## for mouse
 set -g mode-mouse off
@@ -52,8 +53,11 @@ set -g status-justify centre
 set -g status-left-length 100
 set -g status-right-length 100
 #set -g status-right '#[fg=green][%m/%d %H:%M:%S]#[default]'
-set -g status-left '#[bg=colour20] > #I #W < #[bg=colour32] [#P] #T #[default] '
-set -g status-right '#[bg=colour30] #(whoami)@#h #[bg=colour20] #(date \"+%Y.%m.%d %I:%M %p\") '
+set -g status-left '#[bg=colour91] > #I #W #[bg=colour98] [#P] #T #[default] '
+set -g status-right '#[bg=colour57] #(whoami)@#h #[bg=colour20] #(date \"+%Y.%m.%d %H:%M\") '
+# %p = PM, AM
+# %H = 24 hours
+# %I = 12 hours
 
 # monitor activity
 setw -g monitor-activity off
