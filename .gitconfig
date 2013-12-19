@@ -3,3 +3,7 @@
 	name = Timothy Lee
 [push]
 	default = matching
+[color]
+	ui = auto
+[core]
+	autocrlf = true

@@ -114,7 +114,9 @@ set tm=500
    set softtabstop=4 
    set shiftwidth=4 
 
-   au FileType Makefile set noexpandtab
+   au Filetype Makefile set noexpandtab
+   autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+   autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
    "au FileType ruby setlocal softtabstop=2 set shiftwidth=4
 "}      							
 
@@ -280,3 +282,5 @@ set term=screen-256color
 
 " number on
 set nu
+
+set fileformat=unix
