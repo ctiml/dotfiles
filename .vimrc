@@ -282,5 +282,3 @@ set term=screen-256color
 
 " number on
 set nu
-
-set fileformat=unix

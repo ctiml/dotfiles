@@ -5,5 +5,3 @@
 	default = matching
 [color]
 	ui = auto
-[core]
-	autocrlf = true
