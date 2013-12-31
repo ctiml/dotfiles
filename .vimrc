@@ -41,13 +41,14 @@ Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'garbas/vim-snipmate'
-" Bundle 'honza/snipmate-snippets'
 Bundle 'pangloss/vim-javascript'
 Bundle 'vim-scripts/nginx.vim'
 Bundle 'guns/xterm-color-table.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'mattn/emmet-vim'
+" Bundle 'honza/snipmate-snippets'
 " origin repos on vim scripts
 " Bundle 'showcolor'
 
@@ -282,3 +283,6 @@ set term=screen-256color
 
 " number on
 set nu
+
+" emmet-vim
+let g:user_emmet_leader_key='<C-e>'
