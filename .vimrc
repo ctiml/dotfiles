@@ -33,16 +33,16 @@ Bundle 'vim-scripts/OmniCppComplete'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'ervandew/supertab'
+" Bundle 'ervandew/supertab'
 Bundle 'majutsushi/tagbar'
-Bundle 'vim-scripts/VisIncr'
-Bundle 'wincent/Command-T'
+" Bundle 'vim-scripts/VisIncr'
+" Bundle 'wincent/Command-T'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'garbas/vim-snipmate'
 Bundle 'pangloss/vim-javascript'
-Bundle 'vim-scripts/nginx.vim'
+" Bundle 'vim-scripts/nginx.vim'
 Bundle 'guns/xterm-color-table.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kchmck/vim-coffee-script'
@@ -74,9 +74,9 @@ set t_AB=[48;5;%dm
 set t_AF=[38;5;%dm
 if has("gui_running")	" GUI color and font settings
   set guifont=Osaka-Mono:h20
-  set cursorline        " highlight current line
+  "set cursorline        " highlight current line
   colors moria
-  highlight CursorLine          guibg=#003853 ctermbg=24  gui=none cterm=none
+  "highlight CursorLine          guibg=#003853 ctermbg=24  gui=none cterm=none
 else
 " terminal color settings
   colors desert256 
@@ -117,6 +117,7 @@ set tm=500
 
    au Filetype Makefile set noexpandtab
    autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+   autocmd Filetype php setlocal ts=4 sts=4 sw=4
    autocmd Filetype javascript setlocal ts=4 sts=4 sw=4
    "au FileType ruby setlocal softtabstop=2 set shiftwidth=4
 "}      							

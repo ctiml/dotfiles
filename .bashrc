@@ -112,3 +112,5 @@ if [ "$TERM" == "vt100" ] || [ "$TERM" == "ansi" ]; then
  LANG=zh_TW.big5
 fi
 #export GEM_HOME=~/.gem
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
