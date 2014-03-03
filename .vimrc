@@ -56,8 +56,8 @@ filetype plugin indent on
 
 "Some nice mapping to switch syntax (useful if one mixes different languages
 "in one file)
-map <leader>$ :syntax sync fromstart<cr>
-autocmd BufEnter * :syntax sync fromstart
+"map <leader>$ :syntax sync fromstart<cr>
+"autocmd BufEnter * :syntax sync fromstart
 
 " auto reload vimrc when editing it
 autocmd! bufwritepost .vimrc source ~/.vimrc
