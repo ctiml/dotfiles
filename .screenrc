@@ -1,13 +1,5 @@
+# ctiml
 #
-# File:           $HOME/.screenrc
-# written by:     far@pixnet.tw
-# ref:            http://www.guckes.net/Setup/screenrc
-#
-
-# StartUp of programs in an extra window
-# screen -t MAIL      0 mutt
-# screen -t EDIT      1 vim
-
 autodetach        on    # automatically detach on handup
 crlf              off   # no crlf for end-of-lines
 deflogin          off   # default setting for login
@@ -48,8 +40,8 @@ idle              3000 lockscreen
 # 7 White             r    red             r    reverse
 # 8 unused/illegal    w    white           s    standout
 # 9 transparent       y    yellow          u    underline
-caption always "%{dk} %=%{dk}%{+b K}>%{+d W} %-w%{dB}%{W}%n %t%{dk}%{W}%+w %{-d K}<%{W}%="
-hardstatus alwayslastline "%{br wB} load{%l} %{kk} %=%{C}$USER@%{W}%H %{kk}%{wB}    %Y.%m.%d %C %A "
+caption always "%{dk} %{w}%-w%{dB}%{W}%n %t%{dk}%{w}%+w %{w}%="
+hardstatus alwayslastline "%{r wb} %l %{kk} %=%{w}$USER@%H %{kk}%{wb} %Y.%m.%d %c "
 sorendition     kG # black on bold green
 activity        '[%c] %n activity!'
 bell_msg        '[%c] window %n is active'
