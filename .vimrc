@@ -123,6 +123,8 @@ set tm=500
    "au FileType ruby setlocal softtabstop=2 set shiftwidth=4
 "}      							
 
+au FileType php set dictionary+=~/.vim/dict/php.txt
+set complete-=k complete+=k
 
 " status line {
 set laststatus=2
