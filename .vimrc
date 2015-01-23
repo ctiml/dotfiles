@@ -117,8 +117,9 @@ set tm=500
 
    au Filetype Makefile set noexpandtab
    autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+   autocmd Filetype eruby setlocal ts=2 sts=2 sw=2
    autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
-   autocmd Filetype php setlocal ts=4 sts=4 sw=4
+   autocmd Filetype php setlocal ts=2 sts=2 sw=2
    "au FileType ruby setlocal softtabstop=2 set shiftwidth=4
 "}      							
 
