@@ -13,11 +13,12 @@ defscrollback     5000
 nonblock          23    # unblock display after N secs of refusing output
 silencewait       15
 shell             bash  # Default process started in screen's windows.
+shelltitle        shell
 defencoding       utf8
 bind b encoding big5 utf8
 bind u encoding utf8 utf8
 bind @ windowlist -m
-idle              3000 lockscreen
+#idle              3000 lockscreen
 
 
 # Color Settings
@@ -40,8 +41,8 @@ idle              3000 lockscreen
 # 7 White             r    red             r    reverse
 # 8 unused/illegal    w    white           s    standout
 # 9 transparent       y    yellow          u    underline
-caption always "%{dk} %{w}%-w%{dB}%{W}%n %t%{dk}%{w}%+w %{w}%="
-hardstatus alwayslastline "%{r wb} %l %{kk} %=%{w}$USER@%H %{kk}%{wb} %Y.%m.%d %c "
+caption always "%{wk} %{dk}%{w}%-w%{dB}%{W}%n %t%{dk}%{w}%+w %{w}%="
+hardstatus alwayslastline "%{r wb} %l %{kk} %=%{w}$USER@%H %{kk}%{wb} %Y.%m.%d %{dc} %c "
 sorendition     kG # black on bold green
 activity        '[%c] %n activity!'
 bell_msg        '[%c] window %n is active'
