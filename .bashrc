@@ -114,3 +114,4 @@ fi
 #export GEM_HOME=~/.gem
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -d "$HOME/local/bin" ]] && PATH=$PATH:$HOME/local/bin
