@@ -1,6 +1,3 @@
-" far's vimrc
-" Huang-Lin (Far) Tseng <farrrr@gmail.com>
-
 " General Settings
 " For pathogen.vim: auto load all plugins in .vim/bundle
 
@@ -32,7 +29,7 @@ Bundle 'vim-scripts/html5.vim'
 Bundle 'vim-scripts/OmniCppComplete'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Bundle 'ervandew/supertab'
 Bundle 'majutsushi/tagbar'
 " Bundle 'vim-scripts/VisIncr'
