@@ -11,8 +11,6 @@ set hidden              " Allow "hidden" buffers.
 set nobomb              " remove UTF-8 bomb
 set cursorline
 
-filetype off
-
 " vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -24,10 +22,11 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " original repos on github
-Bundle 'Townk/vim-autoclose'
-Bundle 'vim-scripts/html5.vim'
-Bundle 'vim-scripts/OmniCppComplete'
-Bundle 'Lokaltog/vim-easymotion'
+"Bundle 'Townk/vim-autoclose'
+Bundle 'Raimondi/delimitMate'
+Bundle 'othree/html5.vim'
+"Bundle 'vim-scripts/OmniCppComplete'
+Bundle 'easymotion/vim-easymotion'
 Bundle 'scrooloose/nerdtree'
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 " Bundle 'ervandew/supertab'
@@ -35,13 +34,13 @@ Bundle 'majutsushi/tagbar'
 " Bundle 'vim-scripts/VisIncr'
 " Bundle 'wincent/Command-T'
 Bundle 'shawncplus/phpcomplete.vim'
-Bundle 'tomtom/tlib_vim'
+"Bundle 'tomtom/tlib_vim'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'garbas/vim-snipmate'
 Bundle 'pangloss/vim-javascript'
 " Bundle 'vim-scripts/nginx.vim'
 Bundle 'guns/xterm-color-table.vim'
-Bundle 'tpope/vim-fugitive'
+"Bundle 'tpope/vim-fugitive'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'mattn/emmet-vim'
