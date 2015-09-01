@@ -120,7 +120,7 @@ set tm=500
    autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
    autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
    autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
-   autocmd Filetype php setlocal ts=2 sts=2 sw=2
+   autocmd Filetype php setlocal ts=4 sts=4 sw=4
    "au FileType ruby setlocal softtabstop=2 set shiftwidth=4
 "}      							
 
