@@ -53,8 +53,10 @@ set -g status-justify centre
 set -g status-left-length 100
 set -g status-right-length 100
 #set -g status-right '#[fg=green][%m/%d %H:%M:%S]#[default]'
-set -g status-left '#[bg=colour91] > #I #W #[bg=colour98] [#P] #T #[default] '
-set -g status-right '#[bg=colour57] #(whoami)@#h #[bg=colour20] #(date \"+%Y.%m.%d %H:%M\") '
+#set -g status-left '#[bg=colour91] > #I #W #[bg=colour98] [#P] #T #[default] '
+set -g status-left '#[bg=colour91][#P]'
+#set -g status-right '#[bg=colour57] #(whoami)@#h #[bg=colour20] #(date \"+%Y.%m.%d %H:%M\") '
+set -g status-right '#(whoami)@#h #[bg=colour20] #(date \"+%Y.%m.%d %H:%M\") '
 # %p = PM, AM
 # %H = 24 hours
 # %I = 12 hours
