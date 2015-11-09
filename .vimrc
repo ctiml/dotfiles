@@ -115,6 +115,7 @@ set tm=500
    set shiftwidth=4 
 
    au Filetype Makefile set noexpandtab
+   au Filetype tsv set noexpandtab ts=8 sts=8 sw=8
    autocmd Filetype ruby,eruby setlocal ts=2 sts=2 sw=2
    autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
    autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
@@ -206,6 +207,8 @@ au BufRead,BufNewFile /etc/nginx/* set ft=nginx
 
 " set phpini
 au BufRead,BufNewFile /etc/php5/* set ft=dosini
+
+au BufRead,BufNewFile *.tsv set filetype=tsv
 
 " -----------------------------------
 " HTML related 
