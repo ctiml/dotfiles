@@ -239,10 +239,6 @@ set fileencodings=ucs-bom,utf-8,big5,gb2312,latin1
 "nmap <C-t> :set fileencoding=utf8<CR>
 "nmap <C-i> :set fileencoding=big5<CR>
 
-
-au FileType html set ft=xml
-au FileType html set syntax=html
-
 fun! ViewUTF8()
 	set encoding=utf-8                                  
 	set termencoding=big5
