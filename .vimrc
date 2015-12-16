@@ -28,7 +28,8 @@ Bundle 'othree/html5.vim'
 "Bundle 'vim-scripts/OmniCppComplete'
 Bundle 'easymotion/vim-easymotion'
 Bundle 'scrooloose/nerdtree'
-Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'bling/vim-airline'
 " Bundle 'ervandew/supertab'
 Bundle 'majutsushi/tagbar'
 " Bundle 'vim-scripts/VisIncr'
