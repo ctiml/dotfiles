@@ -48,6 +48,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'groenewege/vim-less'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
+Bundle 'kien/ctrlp.vim'
 " Bundle 'honza/snipmate-snippets'
 " origin repos on vim scripts
 " Bundle 'showcolor'
