@@ -211,6 +211,7 @@ au BufRead,BufNewFile /etc/nginx/* set ft=nginx
 au BufRead,BufNewFile /etc/php5/* set ft=dosini
 
 au BufRead,BufNewFile *.tsv set filetype=tsv
+au BufRead,BufNewFile *.gradle set filetype=groovy
 
 " -----------------------------------
 " HTML related 
