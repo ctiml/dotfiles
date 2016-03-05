@@ -293,3 +293,5 @@ set nu
 
 " emmet-vim
 let g:user_emmet_leader_key='<C-e>'
+
+highlight PmenuSel ctermfg=15 ctermbg=12
