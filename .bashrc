@@ -9,7 +9,6 @@ alias more="less"
 #alias cd...="cd ../.."
 alias tmux="tmux -2"
 # VARIABLES
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # my default editor
 export EDITOR="vim"
 export PAGER="less"
@@ -115,3 +114,12 @@ fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -d "$HOME/local/bin" ]] && PATH=$PATH:$HOME/local/bin
+
+pathadd() {
+    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH="${PATH:+"$PATH:"}$1"
+    fi
+}
+
+# Add Gradle path
+pathadd $GRADLE_HOME/bin
