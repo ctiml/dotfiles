@@ -304,5 +304,5 @@ autocmd FileType java
     \   let path_pattern = '\(.\+\)\/\([A-Za-z0-9-]\+\)\/src\/\(main\|test\)\/java\/\(.\+\)' |
     \   let m = matchlist(getcwd(), path_pattern) |
     \   if len(m) > 1 |
-    \       let b:classpath = m[1] . '/' . m[2] . '/Build/distributions/' . m[2] . '/lib/*' |
+    \       let b:classpath = m[1] . '/' . m[2] . '/Build/jars/*' |
     \   endif
