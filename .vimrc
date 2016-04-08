@@ -16,7 +16,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
@@ -69,7 +69,7 @@ set hlsearch		" search highlighting
 set foldmethod=marker
 
 
-set background=dark 
+set background=dark
 " 256 color
 set t_Co=256
 set t_AB=[48;5;%dm
@@ -81,7 +81,7 @@ if has("gui_running")	" GUI color and font settings
   "highlight CursorLine          guibg=#003853 ctermbg=24  gui=none cterm=none
 else
 " terminal color settings
-  colors desert256 
+  colors desert256
 endif
 
 set clipboard=unnamed	" yank to the system register (*) by default
@@ -114,8 +114,8 @@ set tm=500
 
 " TAB setting{
    set expandtab        "replace <TAB> with spaces
-   set softtabstop=4 
-   set shiftwidth=4 
+   set softtabstop=4
+   set shiftwidth=4
 
    au Filetype Makefile set noexpandtab
    au Filetype tsv set noexpandtab ts=8 sts=8 sw=8
@@ -126,7 +126,7 @@ set tm=500
    autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
    autocmd Filetype php setlocal ts=4 sts=4 sw=4
    "au FileType ruby setlocal softtabstop=2 set shiftwidth=4
-"}      							
+"}
 
 au FileType php set dictionary+=~/.vim/dict/php.txt
 set complete-=k complete+=k
@@ -142,7 +142,7 @@ function! CurDir()
     let curdir = substitute(getcwd(), $HOME, "~", "")
     return curdir
 endfunction
- 
+
 function! HasPaste()
     if &paste
         return '[PASTE]'
@@ -161,7 +161,7 @@ autocmd FileType c,cpp,cc  set cindent comments=sr:/*,mb:*,el:*/,:// cino=>s,e0,
 set viminfo='10,\"100,:20,%,n~/.viminfo
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
-set wmw=0                     " set the min width of a window to 0 so we can maximize others 
+set wmw=0                     " set the min width of a window to 0 so we can maximize others
 set wmh=0                     " set the min height of a window to 0 so we can maximize others
 
 " Bash like keys for the command line
@@ -176,9 +176,9 @@ nmap <leader>p :set paste!<BAR>set paste?<CR>
 vnoremap < <gv
 vnoremap > >gv
 
-"--------------------------------------------------------------------------- 
+"---------------------------------------------------------------------------
 " PROGRAMMING SHORTCUTS
-"--------------------------------------------------------------------------- 
+"---------------------------------------------------------------------------
 
 "" Enable omni completion. (Ctrl-X Ctrl-O)
 "autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -215,7 +215,7 @@ au BufRead,BufNewFile *.tsv set filetype=tsv
 au BufRead,BufNewFile *.gradle set filetype=groovy
 
 " -----------------------------------
-" HTML related 
+" HTML related
 " -----------------------------------
 " HTML entities - used by xml edit plugin
 let xml_use_xhtml = 1
@@ -229,10 +229,10 @@ au FileType html set ft=xml
 au FileType html set syntax=html
 
 
-"--------------------------------------------------------------------------- 
+"---------------------------------------------------------------------------
 " ENCODING SETTINGS
-"--------------------------------------------------------------------------- 
-set encoding=utf-8                                  
+"---------------------------------------------------------------------------
+set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf-8,big5,gb2312,latin1
@@ -243,12 +243,12 @@ set fileencodings=ucs-bom,utf-8,big5,gb2312,latin1
 "nmap <C-i> :set fileencoding=big5<CR>
 
 fun! ViewUTF8()
-	set encoding=utf-8                                  
+	set encoding=utf-8
 	set termencoding=big5
 endfun
 
 fun! UTF8()
-	set encoding=utf-8                                  
+	set encoding=utf-8
 	set termencoding=big5
 	set fileencoding=utf-8
 	set fileencodings=ucs-bom,big5,utf-8,latin1
@@ -260,11 +260,11 @@ fun! Big5()
 endfun
 
 
-"--------------------------------------------------------------------------- 
+"---------------------------------------------------------------------------
 " PLUGIN SETTINGS
-"--------------------------------------------------------------------------- 
+"---------------------------------------------------------------------------
 
-" --- AutoClose - Inserts matching bracket, paren, brace or quote 
+" --- AutoClose - Inserts matching bracket, paren, brace or quote
 " fixed the arrow key problems caused by AutoClose
 
 
