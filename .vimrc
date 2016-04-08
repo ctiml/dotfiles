@@ -296,6 +296,7 @@ set nu
 let g:user_emmet_leader_key='<C-e>'
 
 highlight PmenuSel ctermfg=15 ctermbg=12
+highlight Pmenu ctermfg=254 ctermbg=236
 
 " javacomplete and gradle
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
