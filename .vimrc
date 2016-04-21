@@ -302,7 +302,7 @@ highlight Pmenu ctermfg=254 ctermbg=236
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 autocmd FileType java inoremap <buffer> . .<C-X><C-O><C-P>
 autocmd FileType java
-    \   let path_pattern = '\(.\+\)\/\([A-Za-z0-9-]\+\)\/src\/\(main\|test\)\/java\/\(.\+\)' |
+    \   let path_pattern = '\(.\+\)\/\([A-Za-z0-9-]\+\)\/src\/\(main\|test\)\/java' |
     \   let m = matchlist(expand('%:p:h'), path_pattern) |
     \   if len(m) > 1 |
     \       let b:classpath = m[1] . '/' . m[2] . '/Build/jars/*' |
