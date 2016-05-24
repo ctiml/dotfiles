@@ -11,49 +11,49 @@ set hidden              " Allow "hidden" buffers.
 set nobomb              " remove UTF-8 bomb
 set cursorline
 
-" vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" Vundle
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
-" My Bundles here:
-"
-" original repos on github
 "Bundle 'Townk/vim-autoclose'
-Bundle 'Raimondi/delimitMate'
-Bundle 'othree/html5.vim'
+Plugin 'Raimondi/delimitMate'
+" Bundle 'othree/html5.vim'
 "Bundle 'vim-scripts/OmniCppComplete'
-Bundle 'easymotion/vim-easymotion'
-Bundle 'scrooloose/nerdtree'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'scrooloose/nerdtree'
 " Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 " Bundle 'ervandew/supertab'
-Bundle 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 " Bundle 'vim-scripts/VisIncr'
 " Bundle 'wincent/Command-T'
-Bundle 'shawncplus/phpcomplete.vim'
-Bundle 'tomtom/tlib_vim'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'garbas/vim-snipmate'
-Bundle 'pangloss/vim-javascript'
+" Bundle 'shawncplus/phpcomplete.vim'
+Plugin 'tomtom/tlib_vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+" Bundle 'pangloss/vim-javascript'
 " Bundle 'vim-scripts/nginx.vim'
-Bundle 'guns/xterm-color-table.vim'
+Plugin 'guns/xterm-color-table.vim'
 "Bundle 'tpope/vim-fugitive'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'mattn/emmet-vim'
-Bundle 'groenewege/vim-less'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
-Bundle 'kien/ctrlp.vim'
-" Bundle 'honza/snipmate-snippets'
-Bundle 'vim-scripts/javacomplete'
+" Bundle 'kchmck/vim-coffee-script'
+" Bundle 'cakebaker/scss-syntax.vim'
+" Bundle 'mattn/emmet-vim'
+" Bundle 'groenewege/vim-less'
+" Bundle 'vim-ruby/vim-ruby'
+" Bundle 'tpope/vim-rails'
+Plugin 'kien/ctrlp.vim'
+Plugin 'ctiml/javacomplete'
+Plugin 'ctiml/haproxy-syntax-vim'
+Plugin 'tfnico/vim-gradle'
+Plugin 'puppetlabs/puppet-syntax-vim'
 " origin repos on vim scripts
 " Bundle 'showcolor'
 
+call vundle#end()
 filetype plugin indent on
 
 "Some nice mapping to switch syntax (useful if one mixes different languages
@@ -212,7 +212,6 @@ au BufRead,BufNewFile /etc/nginx/* set ft=nginx
 au BufRead,BufNewFile /etc/php5/* set ft=dosini
 
 au BufRead,BufNewFile *.tsv set filetype=tsv
-au BufRead,BufNewFile *.gradle set filetype=groovy
 
 " -----------------------------------
 " HTML related

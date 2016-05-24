@@ -8,5 +8,5 @@ ln -s ./work/dotfiles/.tmux.conf .tmux.conf
 ln -s ./work/dotfiles/.tmux .tmux
 ln -s ./work/dotfiles/.screenrc .screenrc
 
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-vim +BundleInstall +qall
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
