@@ -9,7 +9,7 @@ ignorecase        on    # ignore case in searches
 startup_message   off   # NO startup_message
 defutf8           on    # default setting for utf8
 vbell             off   # be silent on bells
-defscrollback     5000
+defscrollback     10000
 nonblock          23    # unblock display after N secs of refusing output
 silencewait       15
 shell             bash  # Default process started in screen's windows.
@@ -18,6 +18,8 @@ defencoding       utf8
 bind b encoding big5 utf8
 bind u encoding utf8 utf8
 bind @ windowlist -m
+bind . next
+bind , prev
 #idle              3000 lockscreen
 
 
