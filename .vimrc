@@ -298,6 +298,7 @@ highlight PmenuSel ctermfg=15 ctermbg=12
 highlight Pmenu ctermfg=254 ctermbg=236
 
 " javacomplete and gradle
+autocmd Filetype java setlocal ts=2 sts=2 sw=2
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 autocmd FileType java inoremap <buffer> . .<C-X><C-O><C-P>
 autocmd FileType java
