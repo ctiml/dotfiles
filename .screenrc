@@ -15,11 +15,12 @@ silencewait       15
 shell             bash  # Default process started in screen's windows.
 shelltitle        shell
 defencoding       utf8
-bind b encoding big5 utf8
-bind u encoding utf8 utf8
-bind @ windowlist -m
+#bind b encoding big5 utf8
+#bind u encoding utf8 utf8
+#bind @ windowlist -m
 bind . next
 bind , prev
+bind r source ~/.screenrc
 #idle              3000 lockscreen
 
 
@@ -43,14 +44,15 @@ bind , prev
 # 7 White             r    red             r    reverse
 # 8 unused/illegal    w    white           s    standout
 # 9 transparent       y    yellow          u    underline
-caption always "%{wk} %{dk}%{w}%-w%{dB}%{W}%n %t%{dk}%{w}%+w %{w}%="
-hardstatus alwayslastline "%{r wb} %l %{kk} %=%{w}$USER@%H %{kk}%{wb} %Y.%m.%d %{dc} %c "
-sorendition     kG # black on bold green
+#caption always "%{wk} %{dk}%{w}%-w%{dB}%{W}%n %t%{dk}%{w}%+w %{w}%="
+caption always "%{dk} %{w}%-w%{M}%n %t%{w}%+w %="
+hardstatus alwayslastline "%{w} load:%{dB} %l %{dd} %=%{w}$USER@%H %{kk}%{dB}%Y.%m.%d %{dC}%c "
+rendition so 'kG'
 activity        '[%c] %n activity!'
 bell_msg        '[%c] window %n is active'
 pow_detach_msg  'BYE'
 vbell_msg       ' *beep* '
-termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+#termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 defbce "on"
 
 
