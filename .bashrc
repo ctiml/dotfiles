@@ -12,9 +12,9 @@ alias tmux="tmux -2"
 # my default editor
 export EDITOR="vim"
 export PAGER="less"
-export LC_CTYPE=zh_TW.UTF-8
-export LC_MESSAGES=zh_TW.UTF-8
-export LANG=zh_TW.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LC_MESSAGES=en_US.UTF-8
+export LANG=en_US.UTF-8
 export LC_TIME=en_US.UTF-8
 export TERM="xterm-256color"
 # colorful output for GNU ls = coloring by extension:
@@ -110,16 +110,3 @@ fi
 if [ "$TERM" == "vt100" ] || [ "$TERM" == "ansi" ]; then
  LANG=zh_TW.big5
 fi
-#export GEM_HOME=~/.gem
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -d "$HOME/local/bin" ]] && PATH=$PATH:$HOME/local/bin
-
-pathadd() {
-    if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
-        PATH="${PATH:+"$PATH:"}$1"
-    fi
-}
-
-# Add Gradle path
-pathadd $GRADLE_HOME/bin

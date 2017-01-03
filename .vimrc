@@ -297,12 +297,14 @@ let g:user_emmet_leader_key='<C-e>'
 highlight PmenuSel ctermfg=15 ctermbg=12
 highlight Pmenu ctermfg=254 ctermbg=236
 
-" javacomplete and gradle
-autocmd Filetype java setlocal ts=2 sts=2 sw=2
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-autocmd FileType java inoremap <buffer> . .<C-X><C-O><C-P>
-autocmd FileType java
-    \   let path_pattern = '\(.\+\)\/\([A-Za-z0-9-]\+\)\/src\/\(main\|test\)\/java' |
+autocmd Filetype json setlocal ts=2 sts=2 sw=2
+
+" javacomplete
+autocmd Filetype java,groovy setlocal ts=2 sts=2 sw=2
+autocmd FileType java,groovy setlocal omnifunc=javacomplete#Complete
+autocmd FileType java,groovy inoremap <buffer> . .<C-X><C-O><C-P>
+autocmd FileType java,groovy
+    \   let path_pattern = '\(.\+\)\/\([A-Za-z0-9-]\+\)\/src\/\(main\|test\)\/\(java\|groovy\)' |
     \   let m = matchlist(expand('%:p:h'), path_pattern) |
     \   if len(m) > 1 |
     \       let b:classpath = m[1] . '/' . m[2] . '/Build/jars/*' |
