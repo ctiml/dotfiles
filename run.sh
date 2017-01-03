@@ -9,13 +9,13 @@ function link() {
   VIM=`which vim`
   [[ $VIM =~ ^/([^/]+/)+vim$ ]] && echo "vim: $VIM" || exit
 
+  [[ ! -e "$DIR/backup" ]] && mkdir "$DIR/backup"
+
   cd ~
   for f in $FILES
   do
-    if [ -e $f ]; then
-      [[ ! -e "$DIR/backup" ]] && mkdir "$DIR/backup"
-      mv $f "$DIR/backup/"
-    fi
+    [[ -L $f ]] && rm $f
+    [[ -e $f ]] && mv $f "$DIR/backup/"
     ln -s "$DIR/$f"
   done
 
@@ -42,6 +42,6 @@ case $1 in
     unlink
     ;;
   *)
-    echo "nothing to do"
+    echo "Usage: ${BASH_SOURCE[0]} (link|unlink)"
     ;;
 esac
