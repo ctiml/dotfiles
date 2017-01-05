@@ -23,6 +23,8 @@ bind , prev
 bind r source ~/.screenrc
 #idle              3000 lockscreen
 
+bindkey "^[." next
+bindkey "^[," prev
 
 # Color Settings
 # COLOR:  colors codes are combinations of
