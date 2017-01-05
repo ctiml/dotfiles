@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FILES='.bashrc .bash_profile .gitconfig .vimrc .vim .tmux.conf .tmux .screenrc'
+FILES='.bashrc .bash_profile .gitconfig .vimrc .vim .tmux.conf .screenrc'
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 function link() {
