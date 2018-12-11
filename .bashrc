@@ -8,6 +8,8 @@ alias more="less"
 #alias cd..="cd .."
 #alias cd...="cd ../.."
 alias tmux="tmux -2"
+alias k="kubectl"
+alias gl='git log --graph --date="format:%Y-%m-%d %H:%M:%S" --format="%C(auto)%h %ad %C(auto,green)%s %C(auto)%an %d" --color'
 # VARIABLES
 # my default editor
 export EDITOR="vim"
