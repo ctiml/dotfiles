@@ -11,49 +11,32 @@ set hidden              " Allow "hidden" buffers.
 set nobomb              " remove UTF-8 bomb
 set cursorline
 
-" Vundle
+set langmenu=en_US
+let $LANG = 'en_US'
+
+" vim-plug
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'Raimondi/delimitMate'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'easymotion/vim-easymotion'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'kien/ctrlp.vim'
+Plug 'majutsushi/tagbar'
+Plug 'tomtom/tlib_vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'fatih/vim-go'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'AndrewRadev/switch.vim'
+Plug 'Yggdroot/indentLine'
 
-"Bundle 'Townk/vim-autoclose'
-Plugin 'Raimondi/delimitMate'
-" Bundle 'othree/html5.vim'
-"Bundle 'vim-scripts/OmniCppComplete'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'scrooloose/nerdtree'
-" Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'bling/vim-airline'
-" Bundle 'ervandew/supertab'
-Plugin 'majutsushi/tagbar'
-" Bundle 'vim-scripts/VisIncr'
-" Bundle 'wincent/Command-T'
-" Bundle 'shawncplus/phpcomplete.vim'
-Plugin 'tomtom/tlib_vim'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-" Bundle 'pangloss/vim-javascript'
-" Bundle 'vim-scripts/nginx.vim'
-Plugin 'guns/xterm-color-table.vim'
-"Bundle 'tpope/vim-fugitive'
-" Bundle 'kchmck/vim-coffee-script'
-" Bundle 'cakebaker/scss-syntax.vim'
-" Bundle 'mattn/emmet-vim'
-" Bundle 'groenewege/vim-less'
-" Bundle 'vim-ruby/vim-ruby'
-" Bundle 'tpope/vim-rails'
-Plugin 'kien/ctrlp.vim'
-Plugin 'ctiml/javacomplete'
-Plugin 'ctiml/haproxy-syntax-vim'
-Plugin 'tfnico/vim-gradle'
-Plugin 'puppetlabs/puppet-syntax-vim'
-" origin repos on vim scripts
-" Bundle 'showcolor'
-
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 "Some nice mapping to switch syntax (useful if one mixes different languages
@@ -67,7 +50,6 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 syntax on		" syntax highlight
 set hlsearch		" search highlighting
 set foldmethod=marker
-
 
 set background=dark
 " 256 color
@@ -83,6 +65,7 @@ else
 " terminal color settings
   colors desert256
 endif
+highlight Normal ctermbg=232
 
 set clipboard=unnamed	" yank to the system register (*) by default
 set showmatch		" Cursor shows matching ) and }
@@ -124,7 +107,10 @@ set tm=500
    autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
    autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
    autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+   autocmd Filetype typescript setlocal ts=2 sts=2 sw=2
    autocmd Filetype php setlocal ts=4 sts=4 sw=4
+   autocmd Filetype py setlocal ts=4 sts=4 sw=4 expandtab
+   autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
    "au FileType ruby setlocal softtabstop=2 set shiftwidth=4
 "}
 
@@ -175,6 +161,7 @@ nmap <leader>p :set paste!<BAR>set paste?<CR>
 " allow multiple indentation/deindentation in visual mode
 vnoremap < <gv
 vnoremap > >gv
+vmap '' :w !pbcopy<CR><CR>
 
 "---------------------------------------------------------------------------
 " PROGRAMMING SHORTCUTS
@@ -309,3 +296,27 @@ autocmd FileType java,groovy
     \   if len(m) > 1 |
     \       let b:classpath = m[1] . '/' . m[2] . '/Build/jars/*' |
     \   endif
+
+" YCM
+set completeopt-=preview " disable preview window
+
+" easy align
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
+" netrw
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+" augroup ProjectDrawer
+"     autocmd!
+"     autocmd VimEnter * :Vexplore
+" augroup END
+
+" fzf
+set rtp+=/usr/local/opt/fzf
+
+let g:switch_mapping = "-"
+let g:snipMate = { 'snippet_version' : 1 }

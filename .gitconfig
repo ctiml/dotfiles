@@ -7,3 +7,7 @@
 	ui = auto
 [core]
 	quotepath = false
+[alias]
+	co = checkout
+	br = branch
+	st = status
